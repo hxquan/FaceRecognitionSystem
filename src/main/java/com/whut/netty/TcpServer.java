@@ -42,7 +42,7 @@ public class TcpServer implements ApplicationListener {
 
     @Autowired
     TcpHandler tcpHandler;
-
+    // 加锁，保证只有一个线程，在启动server
     private synchronized void start() {
         if (isAccepting()) {
             LOGGER.info("TCP SERVER IS ALREADY STARTED!");
@@ -50,6 +50,7 @@ public class TcpServer implements ApplicationListener {
         }
         try {
             bootstrap = new ServerBootstrap();
+            // netty中的reactor中的主从架构
             bossGroup = new NioEventLoopGroup(1);
             workerGroup = new NioEventLoopGroup();
             bootstrap.group(bossGroup, workerGroup);
@@ -87,6 +88,7 @@ public class TcpServer implements ApplicationListener {
     }
 
     private static boolean isAccepting() {
+        // server启动，并且线程池没有关闭。
         return bootstrap != null && !bossGroup.isShutdown() && !workerGroup.isShutdown();
     }
 

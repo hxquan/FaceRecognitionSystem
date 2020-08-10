@@ -57,6 +57,9 @@ public class FaceRecognitionImpl implements FaceRecognition {
         return null;
     }
 
+
+
+
     private JSONObject request(String imageBase64, String face_landmarks_url) {
         Object [] params = new Object[]{"image_base64"};
         Object [] values = new Object[]{imageBase64};

@@ -9,4 +9,5 @@ public interface FaceRecognition {
     String faceLocations(String imageBase64);
     String faceLandmarks(String imageBase64);
 
+
 }

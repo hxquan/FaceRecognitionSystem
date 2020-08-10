@@ -78,7 +78,12 @@ public class PunchController {
         String sequenceNo = UUID.randomUUID().toString().replaceAll("-", "").substring(0,7) + timestamp;
         punchRecordRepository.save(new PunchRecord(sequenceNo, username, date, time));
         User user = userRepository.findByUsername(username);
-        return new Response(Response.Code.Success, new Data(user, faceInfo)).toString();
+
+//        String resp = new Response(Response.Code.Success, new Data(user, faceInfo)).toString();
+        String resp = new Response(Response.Code.Success, user).toString();
+        System.out.println(resp);
+
+        return resp ;
     }
 
 
@@ -86,7 +91,7 @@ public class PunchController {
      * 打卡
      */
     @RecordLog
-    @CheckPermission
+//    @CheckPermission
     @PostMapping(value = "/get_punch_record")
     @ResponseBody
     public String getPunchRecord(HttpServletRequest request, HttpServletResponse response) {

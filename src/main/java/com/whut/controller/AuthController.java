@@ -54,8 +54,13 @@ public class AuthController {
         if (!faceRecognitionService.saveFaceInfo(username, base64Image)){
             return new Response(Response.Code.ImageError).toString();
         }
-        userRepository.save(new User(username, password, name, sex, phone, 1, 1));
-        return new Response(Response.Code.Success).toString();
+
+        User user = new  User(username, password, name, sex, phone, 1, 1);
+
+        userRepository.save(user);
+        String reps  = new Response(Response.Code.Success, user).toString();
+
+        return reps ;
     }
 
 
