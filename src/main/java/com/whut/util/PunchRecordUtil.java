@@ -9,7 +9,7 @@ import java.util.OptionalInt;
 
 public class PunchRecordUtil {
 
-    public  static  PunchRecord findCurrentRecord(List<PunchRecord> punchRecordList){
+//    public  static  PunchRecord findCurrentRecord(List<PunchRecord> punchRecordList){
 //        OptionalInt pos ;
 //        int [] idList = {};
 //        for (int i = 0; i < punchRecordList.size(); i++) {
@@ -22,7 +22,7 @@ public class PunchRecordUtil {
 //            return  null ;
 //        }
 
-    }
+//    }
 
 
 
