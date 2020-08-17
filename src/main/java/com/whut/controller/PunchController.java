@@ -51,13 +51,12 @@ public class PunchController {
             this.punchRecord = punchRecord ;
         }
 
-
         @Override
         public String toString() {
-            return  "[" +
-                    "user=" + user.toJSON() +
-                    ", punchRecord=" + punchRecord.toJSON() +
-                    "]";
+            return  "{" +
+                    "\"user\":" + user.toJSON() +
+                    ", \"punchRecord\":" + punchRecord.toJSON() +
+                    "}";
         }
     }
 

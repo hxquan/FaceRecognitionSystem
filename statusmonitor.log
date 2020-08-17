@@ -7300,3 +7300,338 @@ java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1' for key '
 2020-08-17 15:20:21.335  INFO 32436 --- [http-nio-0.0.0.0-80-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
 2020-08-17 15:20:21.532  INFO 32436 --- [http-nio-0.0.0.0-80-exec-1] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【835】毫秒
 2020-08-17 15:20:23.945  INFO 32436 --- [http-nio-0.0.0.0-80-exec-2] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【389】毫秒
+2020-08-17 15:47:13.497  INFO 32436 --- [http-nio-0.0.0.0-80-exec-3] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【549】毫秒
+2020-08-17 15:47:18.855  INFO 32436 --- [http-nio-0.0.0.0-80-exec-7] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【901】毫秒
+2020-08-17 15:47:22.095  INFO 32436 --- [http-nio-0.0.0.0-80-exec-10] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【918】毫秒
+2020-08-17 17:22:37.947  INFO 32436 --- [http-nio-0.0.0.0-80-exec-5] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【1027】毫秒
+2020-08-17 17:31:55.688  INFO 32436 --- [http-nio-0.0.0.0-80-exec-7] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【915】毫秒
+2020-08-17 17:36:44.553  INFO 32436 --- [http-nio-0.0.0.0-80-exec-10] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【918】毫秒
+2020-08-17 17:37:53.009  INFO 32436 --- [http-nio-0.0.0.0-80-exec-5] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【937】毫秒
+2020-08-17 17:44:45.055  INFO 32436 --- [http-nio-0.0.0.0-80-exec-7] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【914】毫秒
+2020-08-17 17:47:05.676  INFO 32436 --- [http-nio-0.0.0.0-80-exec-2] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【913】毫秒
+2020-08-17 17:54:58.058  INFO 32436 --- [http-nio-0.0.0.0-80-exec-3] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【916】毫秒
+2020-08-17 17:57:46.594  INFO 32436 --- [Thread-24] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19b89d4: startup date [Mon Aug 17 15:20:10 CST 2020]; root of context hierarchy
+2020-08-17 17:57:46.618  INFO 32436 --- [Thread-24] com.whut.netty.TcpServer                 : 关闭TCP服务器...
+2020-08-17 17:57:46.629  INFO 32436 --- [Thread-24] com.whut.netty.TcpServer                 : TCP SERVER CLOSED!
+2020-08-17 17:57:46.630  INFO 32436 --- [Thread-24] com.whut.netty.TcpServer                 : TCP IS ACCEPTING=false
+2020-08-17 17:57:46.630  INFO 32436 --- [Thread-24] com.whut.netty.UdpServer                 : 关闭UDP服务器...
+2020-08-17 17:57:46.635  INFO 32436 --- [Thread-24] com.whut.netty.UdpServer                 : UDP SERVER CLOSED!
+2020-08-17 17:57:46.636  INFO 32436 --- [Thread-24] com.whut.netty.UdpServer                 : UDP IS ACCEPTING=false
+2020-08-17 17:57:46.680  INFO 32436 --- [Thread-24] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-08-17 17:57:46.684  INFO 32436 --- [Thread-24] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-17 17:57:51.568  INFO 27300 --- [main] com.whut.StartApplication                : Starting StartApplication on bigdaronlee108 with PID 27300 (D:\projects\faceMonitor\StatusMonitor\target\classes started by daronlee in D:\projects\faceMonitor\StatusMonitor)
+2020-08-17 17:57:51.571  INFO 27300 --- [main] com.whut.StartApplication                : The following profiles are active: test
+2020-08-17 17:57:51.790  INFO 27300 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19b89d4: startup date [Mon Aug 17 17:57:51 CST 2020]; root of context hierarchy
+2020-08-17 17:57:53.691  INFO 27300 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2020-08-17 17:57:53.701  INFO 27300 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-17 17:57:53.702  INFO 27300 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-08-17 17:57:53.819  INFO 27300 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-17 17:57:53.819  INFO 27300 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2029 ms
+2020-08-17 17:57:54.330  INFO 27300 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-08-17 17:57:54.339  INFO 27300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-08-17 17:57:54.340  INFO 27300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-08-17 17:57:54.340  INFO 27300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-08-17 17:57:54.340  INFO 27300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-08-17 17:57:55.485  INFO 27300 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-08-17 17:57:55.499  INFO 27300 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-08-17 17:57:55.600  INFO 27300 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2020-08-17 17:57:55.603  INFO 27300 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-08-17 17:57:55.605  INFO 27300 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2020-08-17 17:57:55.661  INFO 27300 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-08-17 17:57:55.808  INFO 27300 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-08-17 17:57:56.276  INFO 27300 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2020-08-17 17:57:56.444  INFO 27300 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-17 17:57:58.486  INFO 27300 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19b89d4: startup date [Mon Aug 17 17:57:51 CST 2020]; root of context hierarchy
+2020-08-17 17:57:58.620  INFO 27300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/register],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.register(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 17:57:58.621  INFO 27300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/login_by_face_image],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.loginByFaceImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 17:57:58.622  INFO 27300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/login_by_password],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.loginByPassword(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 17:57:58.622  INFO 27300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/set_face_image],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.setFaceImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 17:57:58.622  INFO 27300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/set_password],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.setPassword(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 17:57:58.623  INFO 27300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/punch/punch],methods=[POST]}" onto public java.lang.String com.whut.controller.PunchController.punch(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 17:57:58.623  INFO 27300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/punch/get_punch_record],methods=[POST]}" onto public java.lang.String com.whut.controller.PunchController.getPunchRecord(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 17:57:58.624  INFO 27300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-08-17 17:57:58.625  INFO 27300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 17:57:58.743  INFO 27300 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-17 17:57:58.743  INFO 27300 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-17 17:57:58.860  INFO 27300 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-17 17:57:58.965  WARN 27300 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-08-17 17:58:00.664  INFO 27300 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-08-17 17:58:00.674  INFO 27300 --- [main] com.whut.netty.TcpServer                 : 开启TCP服务器...
+2020-08-17 17:58:01.109  WARN 27300 --- [main] io.netty.bootstrap.ServerBootstrap       : Unknown channel option 'TCP_NODELAY' for channel '[id: 0xfd4ea1be]'
+2020-08-17 17:58:01.129  INFO 27300 --- [main] com.whut.netty.TcpServer                 : TCP SERVER IS STARTED!
+2020-08-17 17:58:01.129  INFO 27300 --- [main] com.whut.netty.UdpServer                 : 开启UDP服务器...
+2020-08-17 17:58:01.166  INFO 27300 --- [main] com.whut.netty.UdpServer                 : UDP SERVER IS STARTED!
+2020-08-17 17:58:01.209  INFO 27300 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 80 (http)
+2020-08-17 17:58:01.213  INFO 27300 --- [main] com.whut.StartApplication                : Started StartApplication in 9.982 seconds (JVM running for 10.931)
+2020-08-17 17:58:26.056  INFO 27300 --- [http-nio-0.0.0.0-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-08-17 17:58:26.056  INFO 27300 --- [http-nio-0.0.0.0-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-08-17 17:58:26.108  INFO 27300 --- [http-nio-0.0.0.0-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 52 ms
+2020-08-17 17:58:27.249  INFO 27300 --- [http-nio-0.0.0.0-80-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-08-17 17:58:27.392  INFO 27300 --- [http-nio-0.0.0.0-80-exec-1] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【1213】毫秒
+2020-08-17 17:59:10.981  INFO 27300 --- [http-nio-0.0.0.0-80-exec-3] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【949】毫秒
+2020-08-17 17:59:31.455  INFO 27300 --- [http-nio-0.0.0.0-80-exec-6] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【381】毫秒
+2020-08-17 18:00:08.106  INFO 27300 --- [Thread-24] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19b89d4: startup date [Mon Aug 17 17:57:51 CST 2020]; root of context hierarchy
+2020-08-17 18:00:08.108  INFO 27300 --- [Thread-24] com.whut.netty.TcpServer                 : 关闭TCP服务器...
+2020-08-17 18:00:08.111  INFO 27300 --- [Thread-24] com.whut.netty.TcpServer                 : TCP SERVER CLOSED!
+2020-08-17 18:00:08.111  INFO 27300 --- [Thread-24] com.whut.netty.TcpServer                 : TCP IS ACCEPTING=false
+2020-08-17 18:00:08.111  INFO 27300 --- [Thread-24] com.whut.netty.UdpServer                 : 关闭UDP服务器...
+2020-08-17 18:00:08.113  INFO 27300 --- [Thread-24] com.whut.netty.UdpServer                 : UDP SERVER CLOSED!
+2020-08-17 18:00:08.114  INFO 27300 --- [Thread-24] com.whut.netty.UdpServer                 : UDP IS ACCEPTING=false
+2020-08-17 18:00:08.114  INFO 27300 --- [Thread-24] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-08-17 18:00:08.115  INFO 27300 --- [Thread-24] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-17 18:00:12.592  INFO 29512 --- [main] com.whut.StartApplication                : Starting StartApplication on bigdaronlee108 with PID 29512 (D:\projects\faceMonitor\StatusMonitor\target\classes started by daronlee in D:\projects\faceMonitor\StatusMonitor)
+2020-08-17 18:00:12.595  INFO 29512 --- [main] com.whut.StartApplication                : The following profiles are active: test
+2020-08-17 18:00:12.765  INFO 29512 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19b89d4: startup date [Mon Aug 17 18:00:12 CST 2020]; root of context hierarchy
+2020-08-17 18:00:14.721  INFO 29512 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2020-08-17 18:00:14.732  INFO 29512 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-17 18:00:14.733  INFO 29512 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-08-17 18:00:14.866  INFO 29512 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-17 18:00:14.866  INFO 29512 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2101 ms
+2020-08-17 18:00:15.291  INFO 29512 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-08-17 18:00:15.303  INFO 29512 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-08-17 18:00:15.304  INFO 29512 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-08-17 18:00:15.304  INFO 29512 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-08-17 18:00:15.304  INFO 29512 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-08-17 18:00:16.406  INFO 29512 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-08-17 18:00:16.421  INFO 29512 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-08-17 18:00:16.495  INFO 29512 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2020-08-17 18:00:16.499  INFO 29512 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-08-17 18:00:16.500  INFO 29512 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2020-08-17 18:00:16.547  INFO 29512 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-08-17 18:00:16.656  INFO 29512 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-08-17 18:00:17.055  INFO 29512 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2020-08-17 18:00:17.206  INFO 29512 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-17 18:00:19.342  INFO 29512 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19b89d4: startup date [Mon Aug 17 18:00:12 CST 2020]; root of context hierarchy
+2020-08-17 18:00:19.482  INFO 29512 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/register],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.register(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:00:19.482  INFO 29512 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/set_password],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.setPassword(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:00:19.483  INFO 29512 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/login_by_face_image],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.loginByFaceImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:00:19.483  INFO 29512 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/set_face_image],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.setFaceImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:00:19.483  INFO 29512 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/login_by_password],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.loginByPassword(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:00:19.484  INFO 29512 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/punch/punch],methods=[POST]}" onto public java.lang.String com.whut.controller.PunchController.punch(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:00:19.484  INFO 29512 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/punch/get_punch_record],methods=[POST]}" onto public java.lang.String com.whut.controller.PunchController.getPunchRecord(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:00:19.486  INFO 29512 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-08-17 18:00:19.486  INFO 29512 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:00:19.601  INFO 29512 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-17 18:00:19.601  INFO 29512 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-17 18:00:19.716  INFO 29512 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-17 18:00:19.800  WARN 29512 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-08-17 18:00:21.479  INFO 29512 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-08-17 18:00:21.491  INFO 29512 --- [main] com.whut.netty.TcpServer                 : 开启TCP服务器...
+2020-08-17 18:00:21.897  WARN 29512 --- [main] io.netty.bootstrap.ServerBootstrap       : Unknown channel option 'TCP_NODELAY' for channel '[id: 0xf71d3550]'
+2020-08-17 18:00:21.915  INFO 29512 --- [main] com.whut.netty.TcpServer                 : TCP SERVER IS STARTED!
+2020-08-17 18:00:21.916  INFO 29512 --- [main] com.whut.netty.UdpServer                 : 开启UDP服务器...
+2020-08-17 18:00:21.947  INFO 29512 --- [main] com.whut.netty.UdpServer                 : UDP SERVER IS STARTED!
+2020-08-17 18:00:21.994  INFO 29512 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 80 (http)
+2020-08-17 18:00:21.998  INFO 29512 --- [main] com.whut.StartApplication                : Started StartApplication in 9.744 seconds (JVM running for 10.728)
+2020-08-17 18:00:22.881  INFO 29512 --- [http-nio-0.0.0.0-80-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-08-17 18:00:22.881  INFO 29512 --- [http-nio-0.0.0.0-80-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-08-17 18:00:22.934  INFO 29512 --- [http-nio-0.0.0.0-80-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 53 ms
+2020-08-17 18:00:23.628  INFO 29512 --- [http-nio-0.0.0.0-80-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-08-17 18:00:23.814  INFO 29512 --- [http-nio-0.0.0.0-80-exec-2] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【789】毫秒
+2020-08-17 18:00:25.377  INFO 29512 --- [http-nio-0.0.0.0-80-exec-3] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【370】毫秒
+2020-08-17 18:01:35.205  INFO 29512 --- [Thread-24] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19b89d4: startup date [Mon Aug 17 18:00:12 CST 2020]; root of context hierarchy
+2020-08-17 18:01:35.206  INFO 29512 --- [Thread-24] com.whut.netty.TcpServer                 : 关闭TCP服务器...
+2020-08-17 18:01:35.209  INFO 29512 --- [Thread-24] com.whut.netty.TcpServer                 : TCP SERVER CLOSED!
+2020-08-17 18:01:35.210  INFO 29512 --- [Thread-24] com.whut.netty.TcpServer                 : TCP IS ACCEPTING=false
+2020-08-17 18:01:35.210  INFO 29512 --- [Thread-24] com.whut.netty.UdpServer                 : 关闭UDP服务器...
+2020-08-17 18:01:35.212  INFO 29512 --- [Thread-24] com.whut.netty.UdpServer                 : UDP SERVER CLOSED!
+2020-08-17 18:01:35.213  INFO 29512 --- [Thread-24] com.whut.netty.UdpServer                 : UDP IS ACCEPTING=false
+2020-08-17 18:01:35.213  INFO 29512 --- [Thread-24] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-08-17 18:01:35.215  INFO 29512 --- [Thread-24] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-17 18:01:39.647  INFO 32536 --- [main] com.whut.StartApplication                : Starting StartApplication on bigdaronlee108 with PID 32536 (D:\projects\faceMonitor\StatusMonitor\target\classes started by daronlee in D:\projects\faceMonitor\StatusMonitor)
+2020-08-17 18:01:39.650  INFO 32536 --- [main] com.whut.StartApplication                : The following profiles are active: test
+2020-08-17 18:01:39.818  INFO 32536 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2dc9b0f5: startup date [Mon Aug 17 18:01:39 CST 2020]; root of context hierarchy
+2020-08-17 18:01:41.636  INFO 32536 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2020-08-17 18:01:41.645  INFO 32536 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-17 18:01:41.646  INFO 32536 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-08-17 18:01:41.763  INFO 32536 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-17 18:01:41.763  INFO 32536 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1945 ms
+2020-08-17 18:01:42.196  INFO 32536 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-08-17 18:01:42.204  INFO 32536 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-08-17 18:01:42.204  INFO 32536 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-08-17 18:01:42.204  INFO 32536 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-08-17 18:01:42.204  INFO 32536 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-08-17 18:01:43.335  INFO 32536 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-08-17 18:01:43.349  INFO 32536 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-08-17 18:01:43.422  INFO 32536 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2020-08-17 18:01:43.425  INFO 32536 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-08-17 18:01:43.426  INFO 32536 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2020-08-17 18:01:43.473  INFO 32536 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-08-17 18:01:43.587  INFO 32536 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-08-17 18:01:44.006  INFO 32536 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2020-08-17 18:01:44.198  INFO 32536 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-17 18:01:46.242  INFO 32536 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2dc9b0f5: startup date [Mon Aug 17 18:01:39 CST 2020]; root of context hierarchy
+2020-08-17 18:01:46.389  INFO 32536 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/register],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.register(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:01:46.389  INFO 32536 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/login_by_password],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.loginByPassword(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:01:46.390  INFO 32536 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/set_face_image],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.setFaceImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:01:46.390  INFO 32536 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/login_by_face_image],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.loginByFaceImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:01:46.390  INFO 32536 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/set_password],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.setPassword(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:01:46.391  INFO 32536 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/punch/punch],methods=[POST]}" onto public java.lang.String com.whut.controller.PunchController.punch(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:01:46.391  INFO 32536 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/punch/get_punch_record],methods=[POST]}" onto public java.lang.String com.whut.controller.PunchController.getPunchRecord(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:01:46.392  INFO 32536 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-08-17 18:01:46.393  INFO 32536 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:01:46.511  INFO 32536 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-17 18:01:46.511  INFO 32536 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-17 18:01:46.619  INFO 32536 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-17 18:01:46.706  WARN 32536 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-08-17 18:01:48.311  INFO 32536 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-08-17 18:01:48.323  INFO 32536 --- [main] com.whut.netty.TcpServer                 : 开启TCP服务器...
+2020-08-17 18:01:48.722  WARN 32536 --- [main] io.netty.bootstrap.ServerBootstrap       : Unknown channel option 'TCP_NODELAY' for channel '[id: 0xc7a9cf76]'
+2020-08-17 18:01:48.740  INFO 32536 --- [main] com.whut.netty.TcpServer                 : TCP SERVER IS STARTED!
+2020-08-17 18:01:48.740  INFO 32536 --- [main] com.whut.netty.UdpServer                 : 开启UDP服务器...
+2020-08-17 18:01:48.770  INFO 32536 --- [main] com.whut.netty.UdpServer                 : UDP SERVER IS STARTED!
+2020-08-17 18:01:48.812  INFO 32536 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 80 (http)
+2020-08-17 18:01:48.817  INFO 32536 --- [main] com.whut.StartApplication                : Started StartApplication in 9.559 seconds (JVM running for 10.607)
+2020-08-17 18:02:09.081  INFO 32536 --- [http-nio-0.0.0.0-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-08-17 18:02:09.081  INFO 32536 --- [http-nio-0.0.0.0-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-08-17 18:02:09.138  INFO 32536 --- [http-nio-0.0.0.0-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 57 ms
+2020-08-17 18:02:09.765  INFO 32536 --- [http-nio-0.0.0.0-80-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-08-17 18:02:09.944  INFO 32536 --- [http-nio-0.0.0.0-80-exec-1] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【743】毫秒
+2020-08-17 18:02:11.831  INFO 32536 --- [http-nio-0.0.0.0-80-exec-3] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【369】毫秒
+2020-08-17 18:02:29.795  INFO 32536 --- [Thread-23] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2dc9b0f5: startup date [Mon Aug 17 18:01:39 CST 2020]; root of context hierarchy
+2020-08-17 18:02:29.796  INFO 32536 --- [Thread-23] com.whut.netty.TcpServer                 : 关闭TCP服务器...
+2020-08-17 18:02:29.799  INFO 32536 --- [Thread-23] com.whut.netty.TcpServer                 : TCP SERVER CLOSED!
+2020-08-17 18:02:29.799  INFO 32536 --- [Thread-23] com.whut.netty.TcpServer                 : TCP IS ACCEPTING=false
+2020-08-17 18:02:29.799  INFO 32536 --- [Thread-23] com.whut.netty.UdpServer                 : 关闭UDP服务器...
+2020-08-17 18:02:29.804  INFO 32536 --- [Thread-23] com.whut.netty.UdpServer                 : UDP SERVER CLOSED!
+2020-08-17 18:02:29.804  INFO 32536 --- [Thread-23] com.whut.netty.UdpServer                 : UDP IS ACCEPTING=false
+2020-08-17 18:02:29.804  INFO 32536 --- [Thread-23] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-08-17 18:02:29.806  INFO 32536 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-17 18:02:34.025  INFO 24796 --- [main] com.whut.StartApplication                : Starting StartApplication on bigdaronlee108 with PID 24796 (D:\projects\faceMonitor\StatusMonitor\target\classes started by daronlee in D:\projects\faceMonitor\StatusMonitor)
+2020-08-17 18:02:34.029  INFO 24796 --- [main] com.whut.StartApplication                : The following profiles are active: test
+2020-08-17 18:02:34.282  INFO 24796 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19b89d4: startup date [Mon Aug 17 18:02:34 CST 2020]; root of context hierarchy
+2020-08-17 18:02:36.144  INFO 24796 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2020-08-17 18:02:36.153  INFO 24796 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-17 18:02:36.153  INFO 24796 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-08-17 18:02:36.264  INFO 24796 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-17 18:02:36.264  INFO 24796 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1982 ms
+2020-08-17 18:02:36.673  INFO 24796 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-08-17 18:02:36.680  INFO 24796 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-08-17 18:02:36.680  INFO 24796 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-08-17 18:02:36.681  INFO 24796 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-08-17 18:02:36.681  INFO 24796 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-08-17 18:02:37.758  INFO 24796 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-08-17 18:02:37.770  INFO 24796 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-08-17 18:02:37.835  INFO 24796 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2020-08-17 18:02:37.838  INFO 24796 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-08-17 18:02:37.839  INFO 24796 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2020-08-17 18:02:37.886  INFO 24796 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-08-17 18:02:37.990  INFO 24796 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-08-17 18:02:38.378  INFO 24796 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2020-08-17 18:02:38.530  INFO 24796 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-17 18:02:40.598  INFO 24796 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19b89d4: startup date [Mon Aug 17 18:02:34 CST 2020]; root of context hierarchy
+2020-08-17 18:02:40.734  INFO 24796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/register],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.register(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:02:40.735  INFO 24796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/set_face_image],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.setFaceImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:02:40.735  INFO 24796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/login_by_face_image],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.loginByFaceImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:02:40.735  INFO 24796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/set_password],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.setPassword(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:02:40.735  INFO 24796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/login_by_password],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.loginByPassword(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:02:40.736  INFO 24796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/punch/get_punch_record],methods=[POST]}" onto public java.lang.String com.whut.controller.PunchController.getPunchRecord(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:02:40.736  INFO 24796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/punch/punch],methods=[POST]}" onto public java.lang.String com.whut.controller.PunchController.punch(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:02:40.737  INFO 24796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-08-17 18:02:40.738  INFO 24796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:02:40.849  INFO 24796 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-17 18:02:40.850  INFO 24796 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-17 18:02:40.949  INFO 24796 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-17 18:02:41.028  WARN 24796 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-08-17 18:02:42.597  INFO 24796 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-08-17 18:02:42.608  INFO 24796 --- [main] com.whut.netty.TcpServer                 : 开启TCP服务器...
+2020-08-17 18:02:42.999  WARN 24796 --- [main] io.netty.bootstrap.ServerBootstrap       : Unknown channel option 'TCP_NODELAY' for channel '[id: 0xd3eddd19]'
+2020-08-17 18:02:43.016  INFO 24796 --- [main] com.whut.netty.TcpServer                 : TCP SERVER IS STARTED!
+2020-08-17 18:02:43.017  INFO 24796 --- [main] com.whut.netty.UdpServer                 : 开启UDP服务器...
+2020-08-17 18:02:43.048  INFO 24796 --- [main] com.whut.netty.UdpServer                 : UDP SERVER IS STARTED!
+2020-08-17 18:02:43.110  INFO 24796 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 80 (http)
+2020-08-17 18:02:43.114  INFO 24796 --- [main] com.whut.StartApplication                : Started StartApplication in 9.43 seconds (JVM running for 10.291)
+2020-08-17 18:02:52.737  INFO 24796 --- [http-nio-0.0.0.0-80-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-08-17 18:02:52.737  INFO 24796 --- [http-nio-0.0.0.0-80-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-08-17 18:02:52.783  INFO 24796 --- [http-nio-0.0.0.0-80-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 46 ms
+2020-08-17 18:02:53.380  INFO 24796 --- [http-nio-0.0.0.0-80-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-08-17 18:02:53.575  INFO 24796 --- [http-nio-0.0.0.0-80-exec-2] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【741】毫秒
+2020-08-17 18:04:58.815  INFO 24796 --- [http-nio-0.0.0.0-80-exec-1] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【904】毫秒
+2020-08-17 18:06:20.466  INFO 24796 --- [http-nio-0.0.0.0-80-exec-9] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【902】毫秒
+2020-08-17 18:17:22.020  INFO 24796 --- [http-nio-0.0.0.0-80-exec-2] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【910】毫秒
+2020-08-17 18:31:12.795  INFO 24796 --- [http-nio-0.0.0.0-80-exec-9] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【909】毫秒
+2020-08-17 18:32:58.514  INFO 24796 --- [Thread-23] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19b89d4: startup date [Mon Aug 17 18:02:34 CST 2020]; root of context hierarchy
+2020-08-17 18:32:58.515  INFO 24796 --- [Thread-23] com.whut.netty.TcpServer                 : 关闭TCP服务器...
+2020-08-17 18:32:58.519  INFO 24796 --- [Thread-23] com.whut.netty.TcpServer                 : TCP SERVER CLOSED!
+2020-08-17 18:32:58.519  INFO 24796 --- [Thread-23] com.whut.netty.TcpServer                 : TCP IS ACCEPTING=false
+2020-08-17 18:32:58.519  INFO 24796 --- [Thread-23] com.whut.netty.UdpServer                 : 关闭UDP服务器...
+2020-08-17 18:32:58.522  INFO 24796 --- [Thread-23] com.whut.netty.UdpServer                 : UDP SERVER CLOSED!
+2020-08-17 18:32:58.522  INFO 24796 --- [Thread-23] com.whut.netty.UdpServer                 : UDP IS ACCEPTING=false
+2020-08-17 18:32:58.523  INFO 24796 --- [Thread-23] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-08-17 18:32:58.525  INFO 24796 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-17 18:33:03.059  INFO 7000 --- [main] com.whut.StartApplication                : Starting StartApplication on bigdaronlee108 with PID 7000 (D:\projects\faceMonitor\StatusMonitor\target\classes started by daronlee in D:\projects\faceMonitor\StatusMonitor)
+2020-08-17 18:33:03.062  INFO 7000 --- [main] com.whut.StartApplication                : The following profiles are active: test
+2020-08-17 18:33:03.268  INFO 7000 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19b89d4: startup date [Mon Aug 17 18:33:03 CST 2020]; root of context hierarchy
+2020-08-17 18:33:05.168  INFO 7000 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2020-08-17 18:33:05.181  INFO 7000 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-17 18:33:05.182  INFO 7000 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2020-08-17 18:33:05.300  INFO 7000 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-17 18:33:05.300  INFO 7000 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2032 ms
+2020-08-17 18:33:05.722  INFO 7000 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-08-17 18:33:05.730  INFO 7000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-08-17 18:33:05.730  INFO 7000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-08-17 18:33:05.730  INFO 7000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-08-17 18:33:05.731  INFO 7000 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-08-17 18:33:06.799  INFO 7000 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-08-17 18:33:06.865  INFO 7000 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-08-17 18:33:06.957  INFO 7000 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2020-08-17 18:33:06.961  INFO 7000 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-08-17 18:33:06.962  INFO 7000 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2020-08-17 18:33:07.017  INFO 7000 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-08-17 18:33:07.149  INFO 7000 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-08-17 18:33:07.651  INFO 7000 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2020-08-17 18:33:07.809  INFO 7000 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-17 18:33:10.059  INFO 7000 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19b89d4: startup date [Mon Aug 17 18:33:03 CST 2020]; root of context hierarchy
+2020-08-17 18:33:10.218  INFO 7000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/register],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.register(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:33:10.219  INFO 7000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/login_by_password],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.loginByPassword(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:33:10.219  INFO 7000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/login_by_face_image],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.loginByFaceImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:33:10.220  INFO 7000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/set_password],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.setPassword(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:33:10.220  INFO 7000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/auth/set_face_image],methods=[POST]}" onto public java.lang.String com.whut.controller.AuthController.setFaceImage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:33:10.220  INFO 7000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/punch/punch],methods=[POST]}" onto public java.lang.String com.whut.controller.PunchController.punch(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:33:10.220  INFO 7000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/punch/get_punch_record],methods=[POST]}" onto public java.lang.String com.whut.controller.PunchController.getPunchRecord(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:33:10.222  INFO 7000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-08-17 18:33:10.222  INFO 7000 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-17 18:33:10.338  INFO 7000 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-17 18:33:10.338  INFO 7000 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-17 18:33:10.454  INFO 7000 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-17 18:33:10.533  WARN 7000 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-08-17 18:33:12.159  INFO 7000 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-08-17 18:33:12.170  INFO 7000 --- [main] com.whut.netty.TcpServer                 : 开启TCP服务器...
+2020-08-17 18:33:12.615  WARN 7000 --- [main] io.netty.bootstrap.ServerBootstrap       : Unknown channel option 'TCP_NODELAY' for channel '[id: 0x006320ee]'
+2020-08-17 18:33:12.637  INFO 7000 --- [main] com.whut.netty.TcpServer                 : TCP SERVER IS STARTED!
+2020-08-17 18:33:12.637  INFO 7000 --- [main] com.whut.netty.UdpServer                 : 开启UDP服务器...
+2020-08-17 18:33:12.670  INFO 7000 --- [main] com.whut.netty.UdpServer                 : UDP SERVER IS STARTED!
+2020-08-17 18:33:12.714  INFO 7000 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 80 (http)
+2020-08-17 18:33:12.718  INFO 7000 --- [main] com.whut.StartApplication                : Started StartApplication in 9.966 seconds (JVM running for 10.885)
+2020-08-17 18:34:26.981  INFO 7000 --- [http-nio-0.0.0.0-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-08-17 18:34:26.982  INFO 7000 --- [http-nio-0.0.0.0-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-08-17 18:34:27.027  INFO 7000 --- [http-nio-0.0.0.0-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 45 ms
+2020-08-17 18:34:27.074  INFO 7000 --- [http-nio-0.0.0.0-80-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-08-17 18:34:42.541  INFO 7000 --- [http-nio-0.0.0.0-80-exec-5] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【1097】毫秒
+2020-08-17 18:36:28.936  INFO 7000 --- [http-nio-0.0.0.0-80-exec-3] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【892】毫秒
+2020-08-17 18:37:55.193  INFO 7000 --- [http-nio-0.0.0.0-80-exec-9] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【905】毫秒
+2020-08-17 18:41:34.650  INFO 7000 --- [http-nio-0.0.0.0-80-exec-2] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【901】毫秒
+2020-08-17 18:49:39.916  INFO 7000 --- [http-nio-0.0.0.0-80-exec-9] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【904】毫秒
+2020-08-17 18:52:44.267  INFO 7000 --- [http-nio-0.0.0.0-80-exec-2] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【908】毫秒
+2020-08-17 19:03:14.730  INFO 7000 --- [http-nio-0.0.0.0-80-exec-7] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【907】毫秒
+2020-08-17 19:04:52.500  INFO 7000 --- [http-nio-0.0.0.0-80-exec-10] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【528】毫秒
+2020-08-17 19:04:57.042  INFO 7000 --- [http-nio-0.0.0.0-80-exec-5] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【898】毫秒
+2020-08-17 19:05:06.448  INFO 7000 --- [http-nio-0.0.0.0-80-exec-4] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【888】毫秒
+2020-08-17 19:11:17.619  INFO 7000 --- [http-nio-0.0.0.0-80-exec-8] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【908】毫秒
+2020-08-17 19:11:48.706  INFO 7000 --- [http-nio-0.0.0.0-80-exec-5] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【894】毫秒
+2020-08-17 19:13:17.951  INFO 7000 --- [http-nio-0.0.0.0-80-exec-3] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【891】毫秒
+2020-08-17 19:13:26.470  INFO 7000 --- [http-nio-0.0.0.0-80-exec-7] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【890】毫秒
+2020-08-17 19:13:31.237  INFO 7000 --- [http-nio-0.0.0.0-80-exec-9] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【896】毫秒
+2020-08-17 19:13:35.428  INFO 7000 --- [http-nio-0.0.0.0-80-exec-1] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【885】毫秒
+2020-08-17 19:13:38.649  INFO 7000 --- [http-nio-0.0.0.0-80-exec-2] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【896】毫秒
+2020-08-17 19:13:41.954  INFO 7000 --- [http-nio-0.0.0.0-80-exec-3] com.whut.aop.aspect.RecordLogAspect      : 【com.whut.controller.PunchController.punch】耗时：【890】毫秒
