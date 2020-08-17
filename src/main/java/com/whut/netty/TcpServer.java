@@ -88,7 +88,7 @@ public class TcpServer implements ApplicationListener {
     }
 
     private static boolean isAccepting() {
-        // server启动，并且线程池没有关闭。
+        // server启动，并且线程池没有关闭
         return bootstrap != null && !bossGroup.isShutdown() && !workerGroup.isShutdown();
     }
 

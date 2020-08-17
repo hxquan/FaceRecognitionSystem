@@ -30,3 +30,5 @@ public class DetectionApiImpl implements DetectionApi {
         return res;
     }
 }
+
+

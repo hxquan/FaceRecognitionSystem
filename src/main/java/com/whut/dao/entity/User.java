@@ -1,5 +1,7 @@
 package com.whut.dao.entity;
 
+import com.alibaba.fastjson.JSONObject;
+
 import javax.persistence.*;
 
 @Entity
@@ -100,4 +102,18 @@ public class User {
     public void setDepartmentId(int departmentId) {
         this.departmentId = departmentId;
     }
+
+    public JSONObject toJSON(){
+        JSONObject obj = new JSONObject();
+
+        obj.put("username", getUsername());
+        obj.put("name", getName());
+        obj.put("sex", getSex());
+        obj.put("phone", getPhone());
+        obj.put("departmentId", getDepartmentId());
+        obj.put("role_id", getRoleId());
+
+        return obj;
+    }
+
 }

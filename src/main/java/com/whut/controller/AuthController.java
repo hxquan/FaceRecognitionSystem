@@ -51,6 +51,7 @@ public class AuthController {
             return new Response(Response.Code.ParameterError).toString();
         }
         base64Image = base64Image.replaceAll(" ","+");
+        // 问题所在
         if (!faceRecognitionService.saveFaceInfo(username, base64Image)){
             return new Response(Response.Code.ImageError).toString();
         }

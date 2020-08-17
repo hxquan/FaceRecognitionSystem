@@ -242,6 +242,7 @@ public class HttpClient {
         if (flag){
             List<NameValuePair> nameValuePairList = new ArrayList<>();
             for(int i =0; i<params.length; i++){
+                // 使用NameValuePair的基础实现，本质是个map
                 nameValuePairList.add(new BasicNameValuePair(params[i].toString(),values[i].toString()));
             }
             return nameValuePairList;

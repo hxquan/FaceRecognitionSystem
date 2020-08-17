@@ -1,6 +1,7 @@
 package com.whut.controller;
 
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.whut.aop.interfaces.CheckPermission;
 import com.whut.aop.interfaces.RecordLog;
 import com.whut.dao.PunchRecordRepository;
@@ -11,6 +12,7 @@ import com.whut.dao.entity.User;
 import com.whut.domain.Response;
 import com.whut.service.FaceRecognitionService;
 import com.whut.util.CookieUtil;
+import com.whut.util.PunchRecordUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -42,11 +44,20 @@ public class PunchController {
 
     private static class Data{
         User user;
-        FaceInfo faceInfo;
+        PunchRecord punchRecord;
 
-        public Data(User user, FaceInfo faceInfo) {
+        public Data(User user, PunchRecord punchRecord) {
             this.user = user;
-            this.faceInfo = faceInfo;
+            this.punchRecord = punchRecord ;
+        }
+
+
+        @Override
+        public String toString() {
+            return  "[" +
+                    "user=" + user.toJSON() +
+                    ", punchRecord=" + punchRecord.toJSON() +
+                    "]";
         }
     }
 
@@ -54,7 +65,7 @@ public class PunchController {
      * 打卡
      */
     @RecordLog
-    @CheckPermission
+//    @CheckPermission
     @PostMapping(value = "/punch")
     @ResponseBody
     public String punch(HttpServletRequest request, HttpServletResponse response) {
@@ -69,6 +80,7 @@ public class PunchController {
         if (faceInfo == null){
             return new Response(Response.Code.ImageError).toString();
         }
+        // 问题所在
         if (!faceInfo.getUsername().equals(username)) {
             return new Response(Response.Code.UserAndImageNotMatchError).toString();
         }
@@ -76,13 +88,17 @@ public class PunchController {
         Date date = new Date(timestamp);
         Time time = new Time(timestamp);
         String sequenceNo = UUID.randomUUID().toString().replaceAll("-", "").substring(0,7) + timestamp;
-        punchRecordRepository.save(new PunchRecord(sequenceNo, username, date, time));
+        PunchRecord currentPunchRecord = new PunchRecord(sequenceNo, username, date, time);
+        punchRecordRepository.save(currentPunchRecord);
         User user = userRepository.findByUsername(username);
-
 //        String resp = new Response(Response.Code.Success, new Data(user, faceInfo)).toString();
-        String resp = new Response(Response.Code.Success, user).toString();
-        System.out.println(resp);
 
+//        List<PunchRecord> punchRecordList = punchRecordRepository.findAllByUsername(username);
+//        PunchRecord currentPunchRecord = PunchRecordUtil.findCurrentRecord(punchRecordList) ;
+        Data  data = new Data(user, currentPunchRecord) ;
+
+        String resp = new Response(Response.Code.Success, data.toString()).toString();
+        System.out.println(resp);
         return resp ;
     }
 
@@ -99,8 +115,8 @@ public class PunchController {
         String toDate = request.getParameter("to_date");
 
         String username = CookieUtil.getUsernameFromRequest(request);
-
         List<PunchRecord> punchRecords =  punchRecordRepository.findAllByUsername(username);
+
         JSONArray array = new JSONArray();
         for (PunchRecord record: punchRecords){
             array.add(record.toJSON());

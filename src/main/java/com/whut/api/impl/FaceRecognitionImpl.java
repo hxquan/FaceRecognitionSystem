@@ -60,14 +60,16 @@ public class FaceRecognitionImpl implements FaceRecognition {
 
 
 
-    private JSONObject request(String imageBase64, String face_landmarks_url) {
+    private JSONObject request(String imageBase64, String url) {
         Object [] params = new Object[]{"image_base64"};
         Object [] values = new Object[]{imageBase64};
+        // 封装 请求的参数  形式为: 参数名  和 参数值 ，然后发送请求到python模块。
         List<NameValuePair> paramsList = HttpClient.getParams(params, values);
         JSONObject res;
         try {
-            res = (JSONObject) HttpClient.sendPost(face_landmarks_url, paramsList);
+            res = (JSONObject) HttpClient.sendPost(url, paramsList);
         } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
         if (res == null) {
