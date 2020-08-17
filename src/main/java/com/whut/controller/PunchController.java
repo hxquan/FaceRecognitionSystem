@@ -107,6 +107,52 @@ public class PunchController {
      */
     @RecordLog
 //    @CheckPermission
+    @PostMapping(value = "/simplePunch")
+    @ResponseBody
+    public String simplePunch(HttpServletRequest request, HttpServletResponse response) {
+        String base64Image = request.getParameter("base64_image");
+        if (base64Image == null) {
+            return new Response(Response.Code.ParameterError).toString();
+        }
+        base64Image = base64Image.replaceAll(" ","+");
+//        String username = CookieUtil.getUsernameFromRequest(request);
+
+        FaceInfo faceInfo = faceRecognitionService.recognition(base64Image);
+        if (faceInfo == null){
+            return new Response(Response.Code.ImageError).toString();
+        }
+//        // 问题所在
+//        if (!faceInfo.getUsername().equals(username)) {
+//            return new Response(Response.Code.UserAndImageNotMatchError).toString();
+//        }
+        String  username  =  faceInfo.getUsername();
+
+        long timestamp = System.currentTimeMillis();
+        Date date = new Date(timestamp);
+        Time time = new Time(timestamp);
+        String sequenceNo = UUID.randomUUID().toString().replaceAll("-", "").substring(0,7) + timestamp;
+        PunchRecord currentPunchRecord = new PunchRecord(sequenceNo, username, date, time);
+        punchRecordRepository.save(currentPunchRecord);
+        User user = userRepository.findByUsername(username);
+
+        Data  data = new Data(user, currentPunchRecord) ;
+
+        String resp = new Response(Response.Code.Success, data.toString()).toString();
+        System.out.println(resp);
+        return resp ;
+    }
+
+
+
+
+
+
+
+    /**
+     * 打卡
+     */
+    @RecordLog
+//    @CheckPermission
     @PostMapping(value = "/get_punch_record")
     @ResponseBody
     public String getPunchRecord(HttpServletRequest request, HttpServletResponse response) {
