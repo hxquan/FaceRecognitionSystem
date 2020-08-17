@@ -115,16 +115,12 @@ public class PunchController {
             return new Response(Response.Code.ParameterError).toString();
         }
         base64Image = base64Image.replaceAll(" ","+");
-//        String username = CookieUtil.getUsernameFromRequest(request);
 
         FaceInfo faceInfo = faceRecognitionService.recognition(base64Image);
         if (faceInfo == null){
             return new Response(Response.Code.ImageError).toString();
         }
-//        // 问题所在
-//        if (!faceInfo.getUsername().equals(username)) {
-//            return new Response(Response.Code.UserAndImageNotMatchError).toString();
-//        }
+
         String  username  =  faceInfo.getUsername();
 
         long timestamp = System.currentTimeMillis();
