@@ -1,6 +1,7 @@
 package com.whut.netty;
 
 import com.whut.netty.handler.TcpHandler;
+import com.whut.netty.handler.TcpHandler1;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
@@ -11,6 +12,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.DelimiterBasedFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
+import io.netty.handler.timeout.ReadTimeoutHandler;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,6 +23,7 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
 import java.nio.charset.StandardCharsets;
+import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -41,7 +44,10 @@ public class TcpServer implements ApplicationListener {
     private int PORT;
 
     @Autowired
-    TcpHandler tcpHandler;
+    TcpHandler1 tcpHandler1;
+
+
+
     // 加锁，保证只有一个线程，在启动server
     private synchronized void start() {
         if (isAccepting()) {
@@ -54,28 +60,32 @@ public class TcpServer implements ApplicationListener {
             bossGroup = new NioEventLoopGroup(1);
             workerGroup = new NioEventLoopGroup();
             bootstrap.group(bossGroup, workerGroup);
+            // 指定要使用的 Channel 实现
             bootstrap.channel(NioServerSocketChannel.class);
             bootstrap.option(ChannelOption.SO_BACKLOG, 128);
             // 通过NoDelay禁用Nagle,使消息立即发出去，不用等待到一定的数据量才发出去
             bootstrap.option(ChannelOption.TCP_NODELAY, true);
             // 保持长连接状态
             bootstrap.childOption(ChannelOption.SO_KEEPALIVE, true);
+            // 配置自定义的channelHandler
             bootstrap.childHandler(new ChannelInitializer<SocketChannel>() {
                 @Override
                 protected void initChannel(SocketChannel socketChannel) throws Exception {
                     ChannelPipeline p = socketChannel.pipeline();
-                    // 分组接收
-                    ByteBuf delimiter = Unpooled.copiedBuffer("@end".getBytes());
-                    //增大缓冲区间大小20MB
-                    p.addLast("package", new DelimiterBasedFrameDecoder(20 * 1024 * 1024, delimiter));
-                    // 设置编解码器
+//                    // 分组接收
+//                    ByteBuf delimiter = Unpooled.copiedBuffer("@end".getBytes());
+//                    //增大缓冲区间大小20MB
+//                    p.addLast("package", new DelimiterBasedFrameDecoder(20 * 1024 * 1024, delimiter));
+
+//                    // 设置编解码器
                     p.addLast("encoder", new StringEncoder(StandardCharsets.UTF_8));
                     p.addLast("decoder", new StringDecoder(StandardCharsets.UTF_8));
-                    //设置处理类
-                    p.addLast("handler1", tcpHandler);
+                    //设置处理类，执行具体的业务逻辑
+                    p.addLast("handler1", tcpHandler1);
+//                    p.addLast(new ReadTimeoutHandler(10, TimeUnit.SECONDS));
                 }
             });
-            // 服务端绑定端口
+            // 服务端绑定端口，在对服务器配置完成之后，在绑定到接口
             ChannelFuture future = bootstrap.bind(PORT).sync();
             if (future.isSuccess()) {
                 LOGGER.info("TCP SERVER IS STARTED!");

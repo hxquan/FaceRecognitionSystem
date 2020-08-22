@@ -106,7 +106,6 @@ public class PunchController {
      * 打卡
      */
     @RecordLog
-//    @CheckPermission
     @PostMapping(value = "/simplePunch")
     @ResponseBody
     public String simplePunch(HttpServletRequest request, HttpServletResponse response) {
@@ -130,7 +129,6 @@ public class PunchController {
         PunchRecord currentPunchRecord = new PunchRecord(sequenceNo, username, date, time);
         punchRecordRepository.save(currentPunchRecord);
         User user = userRepository.findByUsername(username);
-
         Data  data = new Data(user, currentPunchRecord) ;
 
         String resp = new Response(Response.Code.Success, data.toString()).toString();

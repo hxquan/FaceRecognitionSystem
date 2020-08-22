@@ -59,11 +59,10 @@ public class Base64s {
         try {
 
 //        String str = encodeToStr("C:\\Users\\daronlee\\Pictures\\Saved Pictures\\728080730.bmp");
-        String str = encodeToStr("C:\\Users\\daronlee\\Documents\\Tencent Files\\" +
-                "1071712435\\FileRecv\\富山-人脸识别素材图片20200728\\富山-人脸识别素材图片20200728\\728081125.bmp");
+        String str = encodeToStr("C:\\Users\\daronlee\\Documents\\Tencent Files\\1071712435\\FileRecv\\MobileFile\\IMG_20200819_202347.jpg");
         System.out.println(str);
 
-        File  strFile = new  File("C:\\Users\\daronlee\\Pictures\\Saved Pictures\\728081125");
+        File  strFile = new  File("C:\\Users\\daronlee\\Pictures\\Saved Pictures\\IMG_20200819_202347");
 
         FileOutputStream fileOutputStream = new FileOutputStream(strFile);
         fileOutputStream.write(str.getBytes());

@@ -157,6 +157,9 @@
                 </configuration>
             </plugin>
         </plugins>
+
+
+        <finalName>FaceMonitor-0.0.01</finalName>
     </build>
 
 </project>
