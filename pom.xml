@@ -159,7 +159,7 @@
         </plugins>
 
 
-        <finalName>FaceMonitor-0.0.01</finalName>
+        <finalName>FaceMonitor-0.0.02</finalName>
     </build>
 
 </project>

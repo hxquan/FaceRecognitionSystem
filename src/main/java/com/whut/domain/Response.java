@@ -10,9 +10,11 @@ public class Response {
     // 请求是否成功
 
 
+
     private int code;
     private String msg;
     private Object data;
+
 
     public Response(Code code) {
         this.code = code.code;
@@ -37,6 +39,7 @@ public class Response {
 
     public enum Code {
 
+        ImageStored(1,"图片保存成功"),
         Success(0, "操作成功"),
         ParameterError(-1, "参数错误"),
         UserNotExistError(-2, "用户不存在"),
@@ -44,7 +47,11 @@ public class Response {
         UnLoginError(-4, "未登录"),
         SystemError(-5, "未登录"),
         ImageError(-6, "图片中人脸比较不清楚，请更换清晰的照片"),
-        UserAndImageNotMatchError(-7, "人脸识别结果与用户不匹配");
+        UserAndImageNotMatchError(-7, "人脸识别结果与用户不匹配"),
+
+        NoImageFileSelected(-8, "没有选择文件，请选择！");
+
+
 
 
         private int code;
