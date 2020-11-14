@@ -1,5 +1,8 @@
 import base64
 import os
+import numpy as np
+import imutils
+import cv2
 
 
 import face_recognition
@@ -17,16 +20,29 @@ def load_image(image_base64):
     file = open(file_stream, 'wb')
     file.write(img_data)
     file.close()
-    img = face_recognition.load_image_file(file_stream)
+    img1 = face_recognition.load_image_file(file_stream)
+    #img = imutils.rotate_bound(img, 90)
+    trans_img = cv2.transpose(img1)
+        #逆时针90度
+    # new_img = cv2.flip(trans_img, 0)
+        #顺时针90度
+    img = cv2.flip(trans_img, 1)
     os.remove(file_stream)
     return img
 
 
 @app.route('/face_encodings', methods=['POST'])
 def face_encodings():
+    # img= face_recognition.load_image_file(src)
+    # face_locations = face_recognition.face_locations(img)
+    # face_encodings = face_recognition.face_encodings(img, face_locations)
     image_base64 = request.form['image_base64']
     img = load_image(image_base64)
-    encodings = face_recognition.face_encodings(img)
+    # img64 = load_image(image_base64)
+    # img = np.rot90(img64, 1)
+    # img = imutils.rotate_bound(img, 90)
+    face_locations = face_recognition.face_locations(img)
+    encodings = face_recognition.face_encodings(img,face_locations)
     if len(encodings) == 0:
         result = {
             "success": False,

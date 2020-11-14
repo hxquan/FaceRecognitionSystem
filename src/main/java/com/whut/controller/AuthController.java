@@ -13,7 +13,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+import sun.misc.BASE64Encoder;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -38,7 +41,19 @@ public class AuthController {
 
     @PostMapping(value = "/register")
     @ResponseBody
-    public String register(HttpServletRequest request, HttpServletResponse response) {
+//    public String register(HttpServletRequest request, HttpServletResponse response) {
+    public String register(@RequestParam("image")MultipartFile file, HttpServletRequest request) {
+//        public String simplePunch(@RequestParam("image") MultipartFile file, HttpServletRequest request) {
+//        long registerTimeStrat = System.currentTimeMillis();
+//        String username = request.getHeader("username");
+//        String password = request.getHeader("password");
+//        String name = request.getHeader("name");
+//        String phone = request.getHeader("phone");
+//        String sex = request.getHeader("sex");
+//        String department = request.getHeader("department");
+//        String roleId = request.getHeader("role_id");
+
+
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String name = request.getParameter("name");
@@ -46,22 +61,59 @@ public class AuthController {
         String sex = request.getParameter("sex");
         String department = request.getParameter("department");
         String roleId = request.getParameter("role_id");
-        String base64Image = request.getParameter("base64_image");
+
+        System.out.println(username);
+
+//        String password = request.getParameter("password");
+//        String name = request.getParameter("name");
+//        String phone = request.getParameter("phone");
+//        String sex = request.getParameter("sex");
+//        String department = request.getParameter("department");
+//        String roleId = request.getParameter("role_id");
+
+//        String base64Image = request.getParameter("base64_image");
+        String base64Image = null ;
+        if (!file.isEmpty()) {
+            try {
+                BASE64Encoder encoder = new BASE64Encoder();
+                // 通过base64来转化图片
+                base64Image = encoder.encode(file.getBytes());
+//                System.out.println(base64Image);
+                System.out.println("base64收到");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+
+
+
+
         if (username == null || base64Image == null || name == null || phone == null) {
             return new Response(Response.Code.ParameterError).toString();
         }
         base64Image = base64Image.replaceAll(" ","+");
         // 问题所在
         if (!faceRecognitionService.saveFaceInfo(username, base64Image)){
-            return new Response(Response.Code.ImageError).toString();
+//            return new Response(Response.Code.ImageError).toString();
+            return "注册失败";
         }
+
 
         User user = new  User(username, password, name, sex, phone, 1, 1);
 
         userRepository.save(user);
         String reps  = new Response(Response.Code.Success, user).toString();
+//        long registerTimeStop = System.currentTimeMillis();
+//        double registerTime = ( registerTimeStop - registerTimeStrat) / 1000.0;
+//        System.out.println("注册时间： " + registerTime);
 
-        return reps ;
+        System.out.println("注册成功");
+        return "注册成功" ;
+
+
     }
 
 

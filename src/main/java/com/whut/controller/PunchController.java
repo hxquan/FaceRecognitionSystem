@@ -17,7 +17,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+import sun.misc.BASE64Encoder;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.Date;
@@ -60,6 +64,7 @@ public class PunchController {
         }
     }
 
+
     /**
      * 打卡
      */
@@ -91,8 +96,8 @@ public class PunchController {
         punchRecordRepository.save(currentPunchRecord);
         User user = userRepository.findByUsername(username);
 //        String resp = new Response(Response.Code.Success, new Data(user, faceInfo)).toString();
-
-//        List<PunchRecord> punchRecordList = punchRecordRepository.findAllByUsername(username);
+//
+        List<PunchRecord> punchRecordList = punchRecordRepository.findAllByUsername(username);
 //        PunchRecord currentPunchRecord = PunchRecordUtil.findCurrentRecord(punchRecordList) ;
         Data  data = new Data(user, currentPunchRecord) ;
 
@@ -102,22 +107,52 @@ public class PunchController {
     }
 
 
+
+
+
+
+
+
     /**
      * 打卡
      */
     @RecordLog
     @PostMapping(value = "/simplePunch")
     @ResponseBody
-    public String simplePunch(HttpServletRequest request, HttpServletResponse response) {
-        String base64Image = request.getParameter("base64_image");
+//    public String simplePunch(HttpServletRequest request, HttpServletResponse response) {
+    public String simplePunch(@RequestParam("image") MultipartFile file, HttpServletRequest request) {
+//        String base64Image = request.getParameter("base64_image");
+        long t1 = System.currentTimeMillis();
+        String base64Image = null ;
+        if (!file.isEmpty()) {
+            try {
+                BASE64Encoder encoder = new BASE64Encoder();
+                // 通过base64来转化图片
+                base64Image = encoder.encode(file.getBytes());
+//                System.out.println(base64Image);
+                System.out.println("base64收到");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        String result;
+
         if (base64Image == null) {
-            return new Response(Response.Code.ParameterError).toString();
+//            return new Response(Response.Code.ParameterError).toString();
+            result = "图片上传失败";
+//            System.out.println("result: "  + result);
+
+
+            return result;
         }
         base64Image = base64Image.replaceAll(" ","+");
 
         FaceInfo faceInfo = faceRecognitionService.recognition(base64Image);
         if (faceInfo == null){
-            return new Response(Response.Code.ImageError).toString();
+//            return new Response(Response.Code.ImageError).toString();
+            result = "未注册或照片不清晰";
+//            System.out.println("result: "  + result);
+            return result;
         }
 
         String  username  =  faceInfo.getUsername();
@@ -133,14 +168,40 @@ public class PunchController {
 
         String resp = new Response(Response.Code.Success, data.toString()).toString();
         System.out.println(resp);
-        return resp ;
+        result = username + " 打卡成功" + " " + date + " " + time;
+
+//        System.out.println("result: "  + result);
+        long t2 = System.currentTimeMillis();
+        double recongnitionTime = ( t2- t1 ) / 1000.0;
+        System.out.println("运行时间：" + recongnitionTime);
+
+        return result ;
     }
 
 
 
 
 
+    @RecordLog
+    @PostMapping(value = "/punchId")
+    @ResponseBody
+    public String punchId(HttpServletRequest request){
 
+
+        String username = request.getParameter("username");
+        String id = request.getParameter("id");
+        String password = request.getParameter("password");
+
+        User user = userRepository.findById(Integer.valueOf(id));
+
+        if (user.getName().equals(username)  &&user.getPassword().equals(password) ){
+            return "打卡成功";
+        }
+
+        return  "用户不存在或者密码错误！";
+
+
+    }
 
 
 

@@ -16,7 +16,7 @@ public class FaceRecognitionService {
     @Autowired
     FaceInfoRepository faceInfoRepository;
 
-    private static final double MAX_TOLERANCE = 0.46;
+    private static final double MAX_TOLERANCE = 0.41;
 
     public boolean saveFaceInfo(String username, String base64Image)
     {

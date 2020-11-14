@@ -41,6 +41,7 @@ public class Response {
 
         ImageStored(1,"图片保存成功"),
         Success(0, "操作成功"),
+        PunchSuccess(2, "打卡成功"),
         ParameterError(-1, "参数错误"),
         UserNotExistError(-2, "用户不存在"),
         PasswordError(-3, "密码错误"),
@@ -50,6 +51,8 @@ public class Response {
         UserAndImageNotMatchError(-7, "人脸识别结果与用户不匹配"),
 
         NoImageFileSelected(-8, "没有选择文件，请选择！");
+
+
 
 
 
