@@ -6,7 +6,7 @@
 
     <groupId>com.whut</groupId>
     <artifactId>StatusMonitor</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.3.6-SNAPSHOT</version>
     
     <!--属性-->
     <properties>
@@ -16,6 +16,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
+        <!-- 布局功能的支持程序  thymeleaf3主程序  layout2以上版本 -->
+        <!-- thymeleaf2   layout1-->
+        <thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>
+
     </properties>
 
     <!-- 版本控制 -->
@@ -42,6 +48,19 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+
+
+
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>3.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>4.0.0</version>
+        </dependency>
         <dependency>
             <groupId>net.sourceforge.nekohtml</groupId>
             <artifactId>nekohtml</artifactId>
@@ -63,6 +82,11 @@
             <version>1.1</version>
             <scope>provided</scope>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.arcsoft.face</groupId>-->
+<!--            <artifactId>arcsoft-sdk-face</artifactId>-->
+<!--            <version>3.0.0.0</version>-->
+<!--        </dependency>-->
         <!--json-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -159,7 +183,11 @@
         </plugins>
 
 
-        <finalName>FaceMonitor-1.3.2</finalName>
+<!--<<<<<<< Updated upstream-->
+<!--        <finalName>FaceMonitor-1.3.2</finalName>-->
+<!--=======-->
+<!--        <finalName>FaceMonitor-0.1.2</finalName>-->
+<!--&gt;>>>>>> Stashed changes-->
     </build>
 
 </project>

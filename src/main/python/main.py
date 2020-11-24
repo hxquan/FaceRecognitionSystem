@@ -42,14 +42,21 @@ def face_encodings():
     # img = np.rot90(img64, 1)
     # img = imutils.rotate_bound(img, 90)
     face_locations = face_recognition.face_locations(img)
-    encodings = face_recognition.face_encodings(img,face_locations)
-    if len(encodings) == 0:
+    if len(face_locations)==0:
         result = {
             "success": False,
-            "message": "image is error",
+            "message": "未检测",
             "data": ""
         }
     else:
+        encodings = face_recognition.face_encodings(img,face_locations)
+        # if len(encodings) == 0:
+        #     result = {
+        #         "success": False,
+        #         "message": "image is error",
+        #         "data": ""
+        #     }
+        # else:
         result = {
             "success": True,
             "message": "",

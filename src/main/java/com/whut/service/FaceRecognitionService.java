@@ -62,7 +62,9 @@ public class FaceRecognitionService {
             }
         }
         if (pos == -1 || min > MAX_TOLERANCE){
-            return null;
+            FaceInfo faceNotRecog = new FaceInfo(null,null,"error");
+
+            return faceNotRecog;
         }
         return faceInfoList.get(pos);
     }

@@ -11,6 +11,7 @@ import com.whut.util.CookieUtil;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,6 +21,8 @@ import sun.misc.BASE64Encoder;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.util.Map;
 
 /**
  * 登陆
@@ -91,7 +94,7 @@ public class AuthController {
 
 
 
-        if (username == null || base64Image == null || name == null || phone == null) {
+        if (username == null || base64Image == null || name == null) {
             return new Response(Response.Code.ParameterError).toString();
         }
         base64Image = base64Image.replaceAll(" ","+");
@@ -197,5 +200,25 @@ public class AuthController {
         }
         return new Response(Response.Code.Success).toString();
     }
+
+   //管理界面登录
+    @PostMapping(value = "/login")
+    public String login(@RequestParam("username") String username,
+                        @RequestParam("password") String password,
+                        Map<String,Object> map, HttpSession session){
+        if("admin".equals(username) && "123456".equals(password)){
+            //登陆成功，防止表单重复提交，可以重定向到主页
+            session.setAttribute("loginUser",username);
+            return "redirect:/main.html";
+        }else{
+            //登陆失败
+
+            map.put("msg","用户名密码错误");
+            return  "login";
+        }
+
+    }
+
+
 
 }

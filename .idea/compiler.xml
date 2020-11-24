@@ -15,7 +15,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="StatusMonitor" options="-extdirs D:\projects\faceMonitor\StatusMonitor-1.2\StatusMonitor/src/main/resources/lib" />
+      <module name="StatusMonitor" options="-extdirs D:\gitrepo\fushan\StatusMonitor/src/main/resources/lib" />
     </option>
   </component>
 </project>

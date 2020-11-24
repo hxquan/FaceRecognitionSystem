@@ -44,6 +44,7 @@ public class PunchController {
 
     @Autowired
     private UserRepository userRepository;
+    int count=0;
 
 
     private static class Data{
@@ -123,6 +124,7 @@ public class PunchController {
     public String simplePunch(@RequestParam("image") MultipartFile file, HttpServletRequest request) {
 //        String base64Image = request.getParameter("base64_image");
         long t1 = System.currentTimeMillis();
+
         String base64Image = null ;
         if (!file.isEmpty()) {
             try {
@@ -150,10 +152,23 @@ public class PunchController {
         FaceInfo faceInfo = faceRecognitionService.recognition(base64Image);
         if (faceInfo == null){
 //            return new Response(Response.Code.ImageError).toString();
-            result = "未注册或照片不清晰";
+            count+=1;
+            result = "未检测到人脸";
+            if(count==3){
+                result = "1";
+            }
 //            System.out.println("result: "  + result);
             return result;
         }
+        if(faceInfo.getUsername() == "error"){
+            count+=1;
+            result = "未识别";
+            if(count==3){
+                result = "1";
+            }
+            return result;
+        }
+        count = 0;
 
         String  username  =  faceInfo.getUsername();
 
@@ -189,13 +204,20 @@ public class PunchController {
 
 
         String username = request.getParameter("username");
-        String id = request.getParameter("id");
+        String name = request.getParameter("name");
         String password = request.getParameter("password");
 
-        User user = userRepository.findById(Integer.valueOf(id));
+        User user = userRepository.findByUsername(username);
+        long timestamp = System.currentTimeMillis();
+        Date date = new Date(timestamp);
+        Time time = new Time(timestamp);
 
-        if (user.getName().equals(username)  &&user.getPassword().equals(password) ){
-            return "打卡成功";
+        if (user.getUsername().equals(username)  &&user.getPassword().equals(password) ){
+            String sequenceNo = UUID.randomUUID().toString().replaceAll("-", "").substring(0,7) + timestamp;
+            PunchRecord currentPunchRecord = new PunchRecord(sequenceNo, username, date, time);
+            punchRecordRepository.save(currentPunchRecord);
+            String result = username + " 打卡成功" + " " + date + " " + time;
+            return result;
         }
 
         return  "用户不存在或者密码错误！";
